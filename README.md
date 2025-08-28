@@ -17,11 +17,11 @@
 
 </div>
 
-![pref_grpo_pipeline](/asserts/pref_grpo_pipeline.png)
+![pref_grpo_pipeline](/assets/pref_grpo_pipeline.png)
 
 
 
-![pref_grpo_pipeline](/asserts/pref_grpo_reward_hacking.png)
+![pref_grpo_pipeline](/assets/pref_grpo_reward_hacking.png)
 
 
 
