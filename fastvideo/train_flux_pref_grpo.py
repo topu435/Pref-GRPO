@@ -784,7 +784,7 @@ def main(args):
         clip_model, _, preprocess_dgn5b = open_clip.create_model_and_transforms('ViT-H-14', 
             pretrained='./open_clip_pytorch_model.bin')
         
-        processor = get_tokenizer('ViT-H-14')
+        processor = open_clip.get_tokenizer('ViT-H-14')
         clip_model = clip_model.to(device)
         clip_model.eval()
 
