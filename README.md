@@ -5,7 +5,7 @@
 Hunyuan, Tencent & [UnifiedReward](https://github.com/CodeGoat24/UnifiedReward) Team
 
 
-<a href="">
+<a href="https://arxiv.org/pdf/2508.20751">
 <img src='https://img.shields.io/badge/arXiv-Pref GRPO-blue' alt='Paper PDF'></a>
 
 <a href="https://codegoat24.github.io/UnifiedReward/Pref-GRPO">
@@ -99,5 +99,10 @@ Thanks to all the contributors!
 
 ## ⭐ Citation
 ```bibtex
-
+@article{Pref-GRPO&UniGenBench,
+  title={Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning.},
+  author={Wang, Yibin and Li, Zhimin and Zang, Yuhang and Zhou, Yujie and Bu, Jiazi and Wang, Chunyu and Lu, Qinglin, and Jin, Cheng and Wang, Jiaqi},
+  journal={arXiv preprint arXiv:2508.20751},
+  year={2025}
+}
 ```
